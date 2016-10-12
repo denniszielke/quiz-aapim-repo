@@ -1,0 +1,608 @@
+{
+  "id": "/apis/57fcb6f5e736cf02301ce2e0",
+  "name": "Quiz.API Public",
+  "$ref-description": "api-management/apis/Quiz.API_Public/api.description.html",
+  "serviceUrl": "http://quiz1010-api.azurewebsites.net",
+  "path": "api",
+  "protocols": [
+    "http",
+    "https"
+  ],
+  "authenticationSettings": {
+    "oAuth2": null,
+    "openid": null
+  },
+  "subscriptionKeyParameterNames": {
+    "header": "Ocp-Apim-Subscription-Key",
+    "query": "subscription-key"
+  },
+  "operations": [
+    {
+      "id": "/apis/57fcb6f5e736cf02301ce2e0/operations/57fcb6f5e736cf0d6488cc35",
+      "name": "CalculateAttemptScore",
+      "method": "POST",
+      "urlTemplate": "/api/quizzes/{quizid}/attempts/{attemptid}/score",
+      "templateParameters": [
+        {
+          "name": "quizid",
+          "description": null,
+          "type": "string",
+          "defaultValue": null,
+          "required": true,
+          "values": []
+        },
+        {
+          "name": "attemptid",
+          "description": null,
+          "type": "string",
+          "defaultValue": null,
+          "required": true,
+          "values": []
+        }
+      ],
+      "$ref-description": null,
+      "request": {
+        "$ref-description": null,
+        "queryParameters": [],
+        "headers": [],
+        "representations": [
+          {
+            "contentType": "application/json",
+            "$ref-sample": null,
+            "schemaId": "57fcb6f5e736cf0d6488cc31",
+            "typeName": "ScoreRequest"
+          },
+          {
+            "contentType": "text/json",
+            "$ref-sample": null,
+            "schemaId": "57fcb6f5e736cf0d6488cc31",
+            "typeName": "ScoreRequest"
+          },
+          {
+            "contentType": "application/xml",
+            "$ref-sample": null,
+            "schemaId": "57fcb6f5e736cf0d6488cc31",
+            "typeName": "ScoreRequest"
+          },
+          {
+            "contentType": "text/xml",
+            "$ref-sample": null,
+            "schemaId": "57fcb6f5e736cf0d6488cc31",
+            "typeName": "ScoreRequest"
+          },
+          {
+            "contentType": "application/x-www-form-urlencoded",
+            "$ref-sample": null
+          }
+        ]
+      },
+      "responses": [
+        {
+          "statusCode": 200,
+          "$ref-description": "api-management/apis/Quiz.API_Public/operations/CalculateAttemptScore.response.200.description.html",
+          "representations": [
+            {
+              "contentType": "application/json",
+              "$ref-sample": null
+            },
+            {
+              "contentType": "text/json",
+              "$ref-sample": null
+            },
+            {
+              "contentType": "application/xml",
+              "$ref-sample": null
+            },
+            {
+              "contentType": "text/xml",
+              "$ref-sample": null
+            }
+          ],
+          "headers": []
+        },
+        {
+          "statusCode": 400,
+          "$ref-description": "api-management/apis/Quiz.API_Public/operations/CalculateAttemptScore.response.400.description.html",
+          "representations": [
+            {
+              "contentType": "application/json",
+              "$ref-sample": null
+            },
+            {
+              "contentType": "text/json",
+              "$ref-sample": null
+            },
+            {
+              "contentType": "application/xml",
+              "$ref-sample": null
+            },
+            {
+              "contentType": "text/xml",
+              "$ref-sample": null
+            }
+          ],
+          "headers": []
+        },
+        {
+          "statusCode": 404,
+          "$ref-description": "api-management/apis/Quiz.API_Public/operations/CalculateAttemptScore.response.404.description.html",
+          "representations": [
+            {
+              "contentType": "application/json",
+              "$ref-sample": null
+            },
+            {
+              "contentType": "text/json",
+              "$ref-sample": null
+            },
+            {
+              "contentType": "application/xml",
+              "$ref-sample": null
+            },
+            {
+              "contentType": "text/xml",
+              "$ref-sample": null
+            }
+          ],
+          "headers": []
+        }
+      ]
+    },
+    {
+      "id": "/apis/57fcb6f5e736cf02301ce2e0/operations/57fcb6f5e736cf0d6488cc3a",
+      "name": "GetAllQuizzes",
+      "method": "GET",
+      "urlTemplate": "/api/Quizzes",
+      "templateParameters": [],
+      "$ref-description": "",
+      "request": {
+        "$ref-description": null,
+        "queryParameters": [],
+        "headers": [],
+        "representations": []
+      },
+      "responses": [
+        {
+          "statusCode": 200,
+          "$ref-description": "api-management/apis/Quiz.API_Public/operations/GetAllQuizzes.response.200.description.html",
+          "representations": [
+            {
+              "contentType": "application/json",
+              "$ref-sample": "",
+              "schemaId": "57fcb6f5e736cf0d6488cc31",
+              "typeName": "QuizArray"
+            },
+            {
+              "contentType": "text/json",
+              "$ref-sample": "",
+              "schemaId": "57fcb6f5e736cf0d6488cc31",
+              "typeName": "QuizArray"
+            },
+            {
+              "contentType": "application/xml",
+              "$ref-sample": "",
+              "schemaId": "57fcb6f5e736cf0d6488cc31",
+              "typeName": "QuizArray"
+            },
+            {
+              "contentType": "text/xml",
+              "$ref-sample": "",
+              "schemaId": "57fcb6f5e736cf0d6488cc31",
+              "typeName": "QuizArray"
+            }
+          ],
+          "headers": []
+        }
+      ],
+      "$ref-policy": "api-management/policies/apis/Quiz.API_Public/operations/GetAllQuizzes.xml"
+    },
+    {
+      "id": "/apis/57fcb6f5e736cf02301ce2e0/operations/57fcb6f5e736cf0d6488cc32",
+      "name": "GetAttempt",
+      "method": "GET",
+      "urlTemplate": "/api/quizzes/{quizid}/attempts/{attemptid}",
+      "templateParameters": [
+        {
+          "name": "quizid",
+          "description": null,
+          "type": "string",
+          "defaultValue": null,
+          "required": true,
+          "values": []
+        },
+        {
+          "name": "attemptid",
+          "description": null,
+          "type": "string",
+          "defaultValue": null,
+          "required": true,
+          "values": []
+        }
+      ],
+      "$ref-description": null,
+      "request": {
+        "$ref-description": null,
+        "queryParameters": [],
+        "headers": [],
+        "representations": []
+      },
+      "responses": [
+        {
+          "statusCode": 200,
+          "$ref-description": "api-management/apis/Quiz.API_Public/operations/GetAttempt.response.200.description.html",
+          "representations": [
+            {
+              "contentType": "application/json",
+              "$ref-sample": null
+            },
+            {
+              "contentType": "text/json",
+              "$ref-sample": null
+            },
+            {
+              "contentType": "application/xml",
+              "$ref-sample": null
+            },
+            {
+              "contentType": "text/xml",
+              "$ref-sample": null
+            }
+          ],
+          "headers": []
+        },
+        {
+          "statusCode": 404,
+          "$ref-description": "api-management/apis/Quiz.API_Public/operations/GetAttempt.response.404.description.html",
+          "representations": [
+            {
+              "contentType": "application/json",
+              "$ref-sample": null
+            },
+            {
+              "contentType": "text/json",
+              "$ref-sample": null
+            },
+            {
+              "contentType": "application/xml",
+              "$ref-sample": null
+            },
+            {
+              "contentType": "text/xml",
+              "$ref-sample": null
+            }
+          ],
+          "headers": []
+        }
+      ]
+    },
+    {
+      "id": "/apis/57fcb6f5e736cf02301ce2e0/operations/57fcb6f5e736cf0d6488cc34",
+      "name": "GetAttemptScore",
+      "method": "GET",
+      "urlTemplate": "/api/quizzes/{quizid}/attempts/{attemptid}/score",
+      "templateParameters": [
+        {
+          "name": "quizid",
+          "description": "",
+          "type": "string",
+          "defaultValue": null,
+          "required": true,
+          "values": []
+        },
+        {
+          "name": "attemptid",
+          "description": "",
+          "type": "string",
+          "defaultValue": null,
+          "required": true,
+          "values": []
+        }
+      ],
+      "$ref-description": "",
+      "request": {
+        "$ref-description": null,
+        "queryParameters": [],
+        "headers": [],
+        "representations": []
+      },
+      "responses": [
+        {
+          "statusCode": 200,
+          "$ref-description": "api-management/apis/Quiz.API_Public/operations/GetAttemptScore.response.200.description.html",
+          "representations": [
+            {
+              "contentType": "application/json",
+              "$ref-sample": "",
+              "schemaId": "57fcb6f5e736cf0d6488cc31",
+              "typeName": "AttemptScore"
+            },
+            {
+              "contentType": "text/json",
+              "$ref-sample": "",
+              "schemaId": "57fcb6f5e736cf0d6488cc31",
+              "typeName": "AttemptScore"
+            },
+            {
+              "contentType": "application/xml",
+              "$ref-sample": "",
+              "schemaId": "57fcb6f5e736cf0d6488cc31",
+              "typeName": "AttemptScore"
+            },
+            {
+              "contentType": "text/xml",
+              "$ref-sample": "",
+              "schemaId": "57fcb6f5e736cf0d6488cc31",
+              "typeName": "AttemptScore"
+            }
+          ],
+          "headers": []
+        },
+        {
+          "statusCode": 404,
+          "$ref-description": "api-management/apis/Quiz.API_Public/operations/GetAttemptScore.response.404.description.html",
+          "representations": [
+            {
+              "contentType": "application/json",
+              "$ref-sample": ""
+            },
+            {
+              "contentType": "text/json",
+              "$ref-sample": ""
+            },
+            {
+              "contentType": "application/xml",
+              "$ref-sample": ""
+            },
+            {
+              "contentType": "text/xml",
+              "$ref-sample": ""
+            }
+          ],
+          "headers": []
+        }
+      ],
+      "$ref-policy": "api-management/policies/apis/Quiz.API_Public/operations/GetAttemptScore.xml"
+    },
+    {
+      "id": "/apis/57fcb6f5e736cf02301ce2e0/operations/57fcb6f5e736cf0d6488cc38",
+      "name": "GetQuizQuestionById",
+      "method": "GET",
+      "urlTemplate": "/api/quizzes/{quizid}/questions/{questionid}",
+      "templateParameters": [
+        {
+          "name": "quizid",
+          "description": null,
+          "type": "string",
+          "defaultValue": null,
+          "required": true,
+          "values": []
+        },
+        {
+          "name": "questionid",
+          "description": null,
+          "type": "string",
+          "defaultValue": null,
+          "required": true,
+          "values": []
+        }
+      ],
+      "$ref-description": null,
+      "request": {
+        "$ref-description": null,
+        "queryParameters": [],
+        "headers": [],
+        "representations": []
+      },
+      "responses": [
+        {
+          "statusCode": 200,
+          "$ref-description": "api-management/apis/Quiz.API_Public/operations/GetQuizQuestionById.response.200.description.html",
+          "representations": [
+            {
+              "contentType": "application/json",
+              "$ref-sample": null
+            },
+            {
+              "contentType": "text/json",
+              "$ref-sample": null
+            },
+            {
+              "contentType": "application/xml",
+              "$ref-sample": null
+            },
+            {
+              "contentType": "text/xml",
+              "$ref-sample": null
+            }
+          ],
+          "headers": []
+        },
+        {
+          "statusCode": 404,
+          "$ref-description": "api-management/apis/Quiz.API_Public/operations/GetQuizQuestionById.response.404.description.html",
+          "representations": [
+            {
+              "contentType": "application/json",
+              "$ref-sample": null
+            },
+            {
+              "contentType": "text/json",
+              "$ref-sample": null
+            },
+            {
+              "contentType": "application/xml",
+              "$ref-sample": null
+            },
+            {
+              "contentType": "text/xml",
+              "$ref-sample": null
+            }
+          ],
+          "headers": []
+        }
+      ]
+    },
+    {
+      "id": "/apis/57fcb6f5e736cf02301ce2e0/operations/57fcb6f5e736cf0d6488cc33",
+      "name": "StartAttempt",
+      "method": "POST",
+      "urlTemplate": "/api/quizzes/{quizid}/attempts",
+      "templateParameters": [
+        {
+          "name": "quizid",
+          "description": null,
+          "type": "string",
+          "defaultValue": null,
+          "required": true,
+          "values": []
+        }
+      ],
+      "$ref-description": null,
+      "request": {
+        "$ref-description": null,
+        "queryParameters": [],
+        "headers": [],
+        "representations": [
+          {
+            "contentType": "application/json",
+            "$ref-sample": null,
+            "schemaId": "57fcb6f5e736cf0d6488cc31",
+            "typeName": "AttemptRequest"
+          },
+          {
+            "contentType": "text/json",
+            "$ref-sample": null,
+            "schemaId": "57fcb6f5e736cf0d6488cc31",
+            "typeName": "AttemptRequest"
+          },
+          {
+            "contentType": "application/xml",
+            "$ref-sample": null,
+            "schemaId": "57fcb6f5e736cf0d6488cc31",
+            "typeName": "AttemptRequest"
+          },
+          {
+            "contentType": "text/xml",
+            "$ref-sample": null,
+            "schemaId": "57fcb6f5e736cf0d6488cc31",
+            "typeName": "AttemptRequest"
+          },
+          {
+            "contentType": "application/x-www-form-urlencoded",
+            "$ref-sample": null
+          }
+        ]
+      },
+      "responses": [
+        {
+          "statusCode": 200,
+          "$ref-description": "api-management/apis/Quiz.API_Public/operations/StartAttempt.response.200.description.html",
+          "representations": [
+            {
+              "contentType": "application/json",
+              "$ref-sample": null,
+              "schemaId": "57fcb6f5e736cf0d6488cc31",
+              "typeName": "Object"
+            },
+            {
+              "contentType": "text/json",
+              "$ref-sample": null,
+              "schemaId": "57fcb6f5e736cf0d6488cc31",
+              "typeName": "Object"
+            },
+            {
+              "contentType": "application/xml",
+              "$ref-sample": null,
+              "schemaId": "57fcb6f5e736cf0d6488cc31",
+              "typeName": "Object"
+            },
+            {
+              "contentType": "text/xml",
+              "$ref-sample": null,
+              "schemaId": "57fcb6f5e736cf0d6488cc31",
+              "typeName": "Object"
+            }
+          ],
+          "headers": []
+        },
+        {
+          "statusCode": 201,
+          "$ref-description": "api-management/apis/Quiz.API_Public/operations/StartAttempt.response.201.description.html",
+          "representations": [
+            {
+              "contentType": "application/json",
+              "$ref-sample": null
+            },
+            {
+              "contentType": "text/json",
+              "$ref-sample": null
+            },
+            {
+              "contentType": "application/xml",
+              "$ref-sample": null
+            },
+            {
+              "contentType": "text/xml",
+              "$ref-sample": null
+            }
+          ],
+          "headers": []
+        },
+        {
+          "statusCode": 400,
+          "$ref-description": "api-management/apis/Quiz.API_Public/operations/StartAttempt.response.400.description.html",
+          "representations": [
+            {
+              "contentType": "application/json",
+              "$ref-sample": null
+            },
+            {
+              "contentType": "text/json",
+              "$ref-sample": null
+            },
+            {
+              "contentType": "application/xml",
+              "$ref-sample": null
+            },
+            {
+              "contentType": "text/xml",
+              "$ref-sample": null
+            }
+          ],
+          "headers": []
+        },
+        {
+          "statusCode": 404,
+          "$ref-description": "api-management/apis/Quiz.API_Public/operations/StartAttempt.response.404.description.html",
+          "representations": [
+            {
+              "contentType": "application/json",
+              "$ref-sample": null
+            },
+            {
+              "contentType": "text/json",
+              "$ref-sample": null
+            },
+            {
+              "contentType": "application/xml",
+              "$ref-sample": null
+            },
+            {
+              "contentType": "text/xml",
+              "$ref-sample": null
+            }
+          ],
+          "headers": []
+        }
+      ]
+    }
+  ],
+  "apiSchemas": [
+    {
+      "id": "/apis/57fcb6f5e736cf02301ce2e0/schemas/57fcb6f5e736cf0d6488cc31",
+      "contentType": "application/vnd.ms-azure-apim.swagger.definitions+json",
+      "$ref-documentValue": "api-management/apis/Quiz.API_Public/apiSchemas/57fcb6f5e736cf0d6488cc31.document"
+    }
+  ],
+  "$ref-policy": "api-management/policies/apis/Quiz.API_Public.xml"
+}

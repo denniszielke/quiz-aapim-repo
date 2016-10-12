@@ -1,0 +1,30 @@
+{
+  "name": "/templates/InviteUserNotificationMessage",
+  "subject": "You are invited to join the $OrganizationName developer network",
+  "$ref-body": "api-management/templates/InviteUserNotificationMessage/body.html",
+  "title": "Invite user",
+  "description": "Invite user.",
+  "isDefault": true,
+  "parameters": [
+    {
+      "name": "OrganizationName",
+      "title": "Organization name",
+      "description": null
+    },
+    {
+      "name": "DevFirstName",
+      "title": "Developer first name",
+      "description": null
+    },
+    {
+      "name": "DevLastName",
+      "title": "Developer last name",
+      "description": null
+    },
+    {
+      "name": "ConfirmUrl",
+      "title": "Confirmation link",
+      "description": null
+    }
+  ]
+}

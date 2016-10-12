@@ -1,0 +1,28 @@
+<search-control></search-control>
+<div class="row">
+    <div class="col-md-9">
+        <h2>{% localized "ApisStrings|PageTitleApis" %}</h2>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+	{% if apis.size > 0 %}
+	<ol class="list-unstyled">
+	{% for api in apis %}
+		<li>
+		<h3>
+		  <a href="/docs/services/{{api.id}}">{{api.name}}</a>
+      {% if api.IsSoap %}
+        <span class="badge badge-soap"> </span>
+      {% endif %}
+    </h3>
+	   {{api.description}}
+	  </li>
+	{% endfor %}
+	</ol>
+	<paging-control></paging-control>
+	{% else %}
+	{% localized "CommonResources|NoItemsToDisplay" %}
+	{% endif %}
+	</div>
+</div>

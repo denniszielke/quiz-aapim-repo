@@ -1,0 +1,1614 @@
+{
+  "id": "/apis/57fcb5eee736cf02301ce2de",
+  "name": "Quiz.API Admin",
+  "$ref-description": "api-management/apis/Quiz.API_Admin/api.description.html",
+  "serviceUrl": "http://quiz1010-api.azurewebsites.net",
+  "path": "admin",
+  "protocols": [
+    "https"
+  ],
+  "authenticationSettings": {
+    "oAuth2": null,
+    "openid": null
+  },
+  "subscriptionKeyParameterNames": {
+    "header": "Ocp-Apim-Subscription-Key",
+    "query": "subscription-key"
+  },
+  "operations": [
+    {
+      "id": "/apis/57fcb5eee736cf02301ce2de/operations/57fcb5f0e736cf0d6488cc05",
+      "name": "AddQuizQuestion",
+      "method": "POST",
+      "urlTemplate": "/api/quizzes/{quizid}/questions",
+      "templateParameters": [
+        {
+          "name": "quizid",
+          "description": null,
+          "type": "string",
+          "defaultValue": null,
+          "required": true,
+          "values": []
+        }
+      ],
+      "$ref-description": null,
+      "request": {
+        "$ref-description": null,
+        "queryParameters": [],
+        "headers": [],
+        "representations": [
+          {
+            "contentType": "application/json",
+            "$ref-sample": null,
+            "schemaId": "57fcb5efe736cf0d6488cbff",
+            "typeName": "QuizQuestion"
+          },
+          {
+            "contentType": "text/json",
+            "$ref-sample": null,
+            "schemaId": "57fcb5efe736cf0d6488cbff",
+            "typeName": "QuizQuestion"
+          },
+          {
+            "contentType": "application/xml",
+            "$ref-sample": null,
+            "schemaId": "57fcb5efe736cf0d6488cbff",
+            "typeName": "QuizQuestion"
+          },
+          {
+            "contentType": "text/xml",
+            "$ref-sample": null,
+            "schemaId": "57fcb5efe736cf0d6488cbff",
+            "typeName": "QuizQuestion"
+          },
+          {
+            "contentType": "application/x-www-form-urlencoded",
+            "$ref-sample": null
+          }
+        ]
+      },
+      "responses": [
+        {
+          "statusCode": 200,
+          "$ref-description": "api-management/apis/Quiz.API_Admin/operations/AddQuizQuestion.response.200.description.html",
+          "representations": [
+            {
+              "contentType": "application/json",
+              "$ref-sample": null,
+              "schemaId": "57fcb5efe736cf0d6488cbff",
+              "typeName": "Object"
+            },
+            {
+              "contentType": "text/json",
+              "$ref-sample": null,
+              "schemaId": "57fcb5efe736cf0d6488cbff",
+              "typeName": "Object"
+            },
+            {
+              "contentType": "application/xml",
+              "$ref-sample": null,
+              "schemaId": "57fcb5efe736cf0d6488cbff",
+              "typeName": "Object"
+            },
+            {
+              "contentType": "text/xml",
+              "$ref-sample": null,
+              "schemaId": "57fcb5efe736cf0d6488cbff",
+              "typeName": "Object"
+            }
+          ],
+          "headers": []
+        },
+        {
+          "statusCode": 201,
+          "$ref-description": "api-management/apis/Quiz.API_Admin/operations/AddQuizQuestion.response.201.description.html",
+          "representations": [
+            {
+              "contentType": "application/json",
+              "$ref-sample": null
+            },
+            {
+              "contentType": "text/json",
+              "$ref-sample": null
+            },
+            {
+              "contentType": "application/xml",
+              "$ref-sample": null
+            },
+            {
+              "contentType": "text/xml",
+              "$ref-sample": null
+            }
+          ],
+          "headers": []
+        },
+        {
+          "statusCode": 404,
+          "$ref-description": "api-management/apis/Quiz.API_Admin/operations/AddQuizQuestion.response.404.description.html",
+          "representations": [
+            {
+              "contentType": "application/json",
+              "$ref-sample": null
+            },
+            {
+              "contentType": "text/json",
+              "$ref-sample": null
+            },
+            {
+              "contentType": "application/xml",
+              "$ref-sample": null
+            },
+            {
+              "contentType": "text/xml",
+              "$ref-sample": null
+            }
+          ],
+          "headers": []
+        }
+      ]
+    },
+    {
+      "id": "/apis/57fcb5eee736cf02301ce2de/operations/57fcb5f0e736cf0d6488cc03",
+      "name": "CalculateAttemptScore",
+      "method": "POST",
+      "urlTemplate": "/api/quizzes/{quizid}/attempts/{attemptid}/score",
+      "templateParameters": [
+        {
+          "name": "quizid",
+          "description": null,
+          "type": "string",
+          "defaultValue": null,
+          "required": true,
+          "values": []
+        },
+        {
+          "name": "attemptid",
+          "description": null,
+          "type": "string",
+          "defaultValue": null,
+          "required": true,
+          "values": []
+        }
+      ],
+      "$ref-description": null,
+      "request": {
+        "$ref-description": null,
+        "queryParameters": [],
+        "headers": [],
+        "representations": [
+          {
+            "contentType": "application/json",
+            "$ref-sample": null,
+            "schemaId": "57fcb5efe736cf0d6488cbff",
+            "typeName": "ScoreRequest"
+          },
+          {
+            "contentType": "text/json",
+            "$ref-sample": null,
+            "schemaId": "57fcb5efe736cf0d6488cbff",
+            "typeName": "ScoreRequest"
+          },
+          {
+            "contentType": "application/xml",
+            "$ref-sample": null,
+            "schemaId": "57fcb5efe736cf0d6488cbff",
+            "typeName": "ScoreRequest"
+          },
+          {
+            "contentType": "text/xml",
+            "$ref-sample": null,
+            "schemaId": "57fcb5efe736cf0d6488cbff",
+            "typeName": "ScoreRequest"
+          },
+          {
+            "contentType": "application/x-www-form-urlencoded",
+            "$ref-sample": null
+          }
+        ]
+      },
+      "responses": [
+        {
+          "statusCode": 200,
+          "$ref-description": "api-management/apis/Quiz.API_Admin/operations/CalculateAttemptScore.response.200.description.html",
+          "representations": [
+            {
+              "contentType": "application/json",
+              "$ref-sample": null
+            },
+            {
+              "contentType": "text/json",
+              "$ref-sample": null
+            },
+            {
+              "contentType": "application/xml",
+              "$ref-sample": null
+            },
+            {
+              "contentType": "text/xml",
+              "$ref-sample": null
+            }
+          ],
+          "headers": []
+        },
+        {
+          "statusCode": 400,
+          "$ref-description": "api-management/apis/Quiz.API_Admin/operations/CalculateAttemptScore.response.400.description.html",
+          "representations": [
+            {
+              "contentType": "application/json",
+              "$ref-sample": null
+            },
+            {
+              "contentType": "text/json",
+              "$ref-sample": null
+            },
+            {
+              "contentType": "application/xml",
+              "$ref-sample": null
+            },
+            {
+              "contentType": "text/xml",
+              "$ref-sample": null
+            }
+          ],
+          "headers": []
+        },
+        {
+          "statusCode": 404,
+          "$ref-description": "api-management/apis/Quiz.API_Admin/operations/CalculateAttemptScore.response.404.description.html",
+          "representations": [
+            {
+              "contentType": "application/json",
+              "$ref-sample": null
+            },
+            {
+              "contentType": "text/json",
+              "$ref-sample": null
+            },
+            {
+              "contentType": "application/xml",
+              "$ref-sample": null
+            },
+            {
+              "contentType": "text/xml",
+              "$ref-sample": null
+            }
+          ],
+          "headers": []
+        }
+      ]
+    },
+    {
+      "id": "/apis/57fcb5eee736cf02301ce2de/operations/57fcb5f0e736cf0d6488cc09",
+      "name": "CreateQuiz",
+      "method": "POST",
+      "urlTemplate": "/api/Quizzes",
+      "templateParameters": [],
+      "$ref-description": null,
+      "request": {
+        "$ref-description": null,
+        "queryParameters": [],
+        "headers": [],
+        "representations": [
+          {
+            "contentType": "application/json",
+            "$ref-sample": null,
+            "schemaId": "57fcb5efe736cf0d6488cbff",
+            "typeName": "Quiz"
+          },
+          {
+            "contentType": "text/json",
+            "$ref-sample": null,
+            "schemaId": "57fcb5efe736cf0d6488cbff",
+            "typeName": "Quiz"
+          },
+          {
+            "contentType": "application/xml",
+            "$ref-sample": null,
+            "schemaId": "57fcb5efe736cf0d6488cbff",
+            "typeName": "Quiz"
+          },
+          {
+            "contentType": "text/xml",
+            "$ref-sample": null,
+            "schemaId": "57fcb5efe736cf0d6488cbff",
+            "typeName": "Quiz"
+          },
+          {
+            "contentType": "application/x-www-form-urlencoded",
+            "$ref-sample": null
+          }
+        ]
+      },
+      "responses": [
+        {
+          "statusCode": 200,
+          "$ref-description": "api-management/apis/Quiz.API_Admin/operations/CreateQuiz.response.200.description.html",
+          "representations": [
+            {
+              "contentType": "application/json",
+              "$ref-sample": null,
+              "schemaId": "57fcb5efe736cf0d6488cbff",
+              "typeName": "Object"
+            },
+            {
+              "contentType": "text/json",
+              "$ref-sample": null,
+              "schemaId": "57fcb5efe736cf0d6488cbff",
+              "typeName": "Object"
+            },
+            {
+              "contentType": "application/xml",
+              "$ref-sample": null,
+              "schemaId": "57fcb5efe736cf0d6488cbff",
+              "typeName": "Object"
+            },
+            {
+              "contentType": "text/xml",
+              "$ref-sample": null,
+              "schemaId": "57fcb5efe736cf0d6488cbff",
+              "typeName": "Object"
+            }
+          ],
+          "headers": []
+        },
+        {
+          "statusCode": 201,
+          "$ref-description": "api-management/apis/Quiz.API_Admin/operations/CreateQuiz.response.201.description.html",
+          "representations": [
+            {
+              "contentType": "application/json",
+              "$ref-sample": null
+            },
+            {
+              "contentType": "text/json",
+              "$ref-sample": null
+            },
+            {
+              "contentType": "application/xml",
+              "$ref-sample": null
+            },
+            {
+              "contentType": "text/xml",
+              "$ref-sample": null
+            }
+          ],
+          "headers": []
+        }
+      ]
+    },
+    {
+      "id": "/apis/57fcb5eee736cf02301ce2de/operations/57fcb5f0e736cf0d6488cc0b",
+      "name": "DeleteQuiz",
+      "method": "DELETE",
+      "urlTemplate": "/api/Quizzes/{id}",
+      "templateParameters": [
+        {
+          "name": "id",
+          "description": null,
+          "type": "string",
+          "defaultValue": null,
+          "required": true,
+          "values": []
+        }
+      ],
+      "$ref-description": null,
+      "request": {
+        "$ref-description": null,
+        "queryParameters": [],
+        "headers": [],
+        "representations": []
+      },
+      "responses": [
+        {
+          "statusCode": 200,
+          "$ref-description": "api-management/apis/Quiz.API_Admin/operations/DeleteQuiz.response.200.description.html",
+          "representations": [
+            {
+              "contentType": "application/json",
+              "$ref-sample": null
+            },
+            {
+              "contentType": "text/json",
+              "$ref-sample": null
+            },
+            {
+              "contentType": "application/xml",
+              "$ref-sample": null
+            },
+            {
+              "contentType": "text/xml",
+              "$ref-sample": null
+            }
+          ],
+          "headers": []
+        },
+        {
+          "statusCode": 404,
+          "$ref-description": "api-management/apis/Quiz.API_Admin/operations/DeleteQuiz.response.404.description.html",
+          "representations": [
+            {
+              "contentType": "application/json",
+              "$ref-sample": null
+            },
+            {
+              "contentType": "text/json",
+              "$ref-sample": null
+            },
+            {
+              "contentType": "application/xml",
+              "$ref-sample": null
+            },
+            {
+              "contentType": "text/xml",
+              "$ref-sample": null
+            }
+          ],
+          "headers": []
+        }
+      ]
+    },
+    {
+      "id": "/apis/57fcb5eee736cf02301ce2de/operations/57fcb5f0e736cf0d6488cc07",
+      "name": "DeleteQuizQuestion",
+      "method": "DELETE",
+      "urlTemplate": "/api/quizzes/{quizid}/questions/{questionid}",
+      "templateParameters": [
+        {
+          "name": "quizid",
+          "description": null,
+          "type": "string",
+          "defaultValue": null,
+          "required": true,
+          "values": []
+        },
+        {
+          "name": "questionid",
+          "description": null,
+          "type": "string",
+          "defaultValue": null,
+          "required": true,
+          "values": []
+        }
+      ],
+      "$ref-description": null,
+      "request": {
+        "$ref-description": null,
+        "queryParameters": [],
+        "headers": [],
+        "representations": []
+      },
+      "responses": [
+        {
+          "statusCode": 200,
+          "$ref-description": "api-management/apis/Quiz.API_Admin/operations/DeleteQuizQuestion.response.200.description.html",
+          "representations": [
+            {
+              "contentType": "application/json",
+              "$ref-sample": null
+            },
+            {
+              "contentType": "text/json",
+              "$ref-sample": null
+            },
+            {
+              "contentType": "application/xml",
+              "$ref-sample": null
+            },
+            {
+              "contentType": "text/xml",
+              "$ref-sample": null
+            }
+          ],
+          "headers": []
+        },
+        {
+          "statusCode": 404,
+          "$ref-description": "api-management/apis/Quiz.API_Admin/operations/DeleteQuizQuestion.response.404.description.html",
+          "representations": [
+            {
+              "contentType": "application/json",
+              "$ref-sample": null
+            },
+            {
+              "contentType": "text/json",
+              "$ref-sample": null
+            },
+            {
+              "contentType": "application/xml",
+              "$ref-sample": null
+            },
+            {
+              "contentType": "text/xml",
+              "$ref-sample": null
+            }
+          ],
+          "headers": []
+        }
+      ]
+    },
+    {
+      "id": "/apis/57fcb5eee736cf02301ce2de/operations/57fcb5f0e736cf0d6488cc04",
+      "name": "GetAllQuizQuestions",
+      "method": "GET",
+      "urlTemplate": "/api/quizzes/{quizid}/questions",
+      "templateParameters": [
+        {
+          "name": "quizid",
+          "description": null,
+          "type": "string",
+          "defaultValue": null,
+          "required": true,
+          "values": []
+        }
+      ],
+      "$ref-description": null,
+      "request": {
+        "$ref-description": null,
+        "queryParameters": [],
+        "headers": [],
+        "representations": []
+      },
+      "responses": [
+        {
+          "statusCode": 200,
+          "$ref-description": "api-management/apis/Quiz.API_Admin/operations/GetAllQuizQuestions.response.200.description.html",
+          "representations": [
+            {
+              "contentType": "application/json",
+              "$ref-sample": null
+            },
+            {
+              "contentType": "text/json",
+              "$ref-sample": null
+            },
+            {
+              "contentType": "application/xml",
+              "$ref-sample": null
+            },
+            {
+              "contentType": "text/xml",
+              "$ref-sample": null
+            }
+          ],
+          "headers": []
+        },
+        {
+          "statusCode": 404,
+          "$ref-description": "api-management/apis/Quiz.API_Admin/operations/GetAllQuizQuestions.response.404.description.html",
+          "representations": [
+            {
+              "contentType": "application/json",
+              "$ref-sample": null
+            },
+            {
+              "contentType": "text/json",
+              "$ref-sample": null
+            },
+            {
+              "contentType": "application/xml",
+              "$ref-sample": null
+            },
+            {
+              "contentType": "text/xml",
+              "$ref-sample": null
+            }
+          ],
+          "headers": []
+        }
+      ]
+    },
+    {
+      "id": "/apis/57fcb5eee736cf02301ce2de/operations/57fcb5f0e736cf0d6488cc08",
+      "name": "GetAllQuizzes",
+      "method": "GET",
+      "urlTemplate": "/api/Quizzes",
+      "templateParameters": [],
+      "$ref-description": null,
+      "request": {
+        "$ref-description": null,
+        "queryParameters": [],
+        "headers": [],
+        "representations": []
+      },
+      "responses": [
+        {
+          "statusCode": 200,
+          "$ref-description": "api-management/apis/Quiz.API_Admin/operations/GetAllQuizzes.response.200.description.html",
+          "representations": [
+            {
+              "contentType": "application/json",
+              "$ref-sample": null,
+              "schemaId": "57fcb5efe736cf0d6488cbff",
+              "typeName": "QuizArray"
+            },
+            {
+              "contentType": "text/json",
+              "$ref-sample": null,
+              "schemaId": "57fcb5efe736cf0d6488cbff",
+              "typeName": "QuizArray"
+            },
+            {
+              "contentType": "application/xml",
+              "$ref-sample": null,
+              "schemaId": "57fcb5efe736cf0d6488cbff",
+              "typeName": "QuizArray"
+            },
+            {
+              "contentType": "text/xml",
+              "$ref-sample": null,
+              "schemaId": "57fcb5efe736cf0d6488cbff",
+              "typeName": "QuizArray"
+            }
+          ],
+          "headers": []
+        }
+      ]
+    },
+    {
+      "id": "/apis/57fcb5eee736cf02301ce2de/operations/57fcb5f0e736cf0d6488cc00",
+      "name": "GetAttempt",
+      "method": "GET",
+      "urlTemplate": "/api/quizzes/{quizid}/attempts/{attemptid}",
+      "templateParameters": [
+        {
+          "name": "quizid",
+          "description": null,
+          "type": "string",
+          "defaultValue": null,
+          "required": true,
+          "values": []
+        },
+        {
+          "name": "attemptid",
+          "description": null,
+          "type": "string",
+          "defaultValue": null,
+          "required": true,
+          "values": []
+        }
+      ],
+      "$ref-description": null,
+      "request": {
+        "$ref-description": null,
+        "queryParameters": [],
+        "headers": [],
+        "representations": []
+      },
+      "responses": [
+        {
+          "statusCode": 200,
+          "$ref-description": "api-management/apis/Quiz.API_Admin/operations/GetAttempt.response.200.description.html",
+          "representations": [
+            {
+              "contentType": "application/json",
+              "$ref-sample": null
+            },
+            {
+              "contentType": "text/json",
+              "$ref-sample": null
+            },
+            {
+              "contentType": "application/xml",
+              "$ref-sample": null
+            },
+            {
+              "contentType": "text/xml",
+              "$ref-sample": null
+            }
+          ],
+          "headers": []
+        },
+        {
+          "statusCode": 404,
+          "$ref-description": "api-management/apis/Quiz.API_Admin/operations/GetAttempt.response.404.description.html",
+          "representations": [
+            {
+              "contentType": "application/json",
+              "$ref-sample": null
+            },
+            {
+              "contentType": "text/json",
+              "$ref-sample": null
+            },
+            {
+              "contentType": "application/xml",
+              "$ref-sample": null
+            },
+            {
+              "contentType": "text/xml",
+              "$ref-sample": null
+            }
+          ],
+          "headers": []
+        }
+      ]
+    },
+    {
+      "id": "/apis/57fcb5eee736cf02301ce2de/operations/57fcb5f0e736cf0d6488cc02",
+      "name": "GetAttemptScore",
+      "method": "GET",
+      "urlTemplate": "/api/quizzes/{quizid}/attempts/{attemptid}/score",
+      "templateParameters": [
+        {
+          "name": "quizid",
+          "description": null,
+          "type": "string",
+          "defaultValue": null,
+          "required": true,
+          "values": []
+        },
+        {
+          "name": "attemptid",
+          "description": null,
+          "type": "string",
+          "defaultValue": null,
+          "required": true,
+          "values": []
+        }
+      ],
+      "$ref-description": null,
+      "request": {
+        "$ref-description": null,
+        "queryParameters": [],
+        "headers": [],
+        "representations": []
+      },
+      "responses": [
+        {
+          "statusCode": 200,
+          "$ref-description": "api-management/apis/Quiz.API_Admin/operations/GetAttemptScore.response.200.description.html",
+          "representations": [
+            {
+              "contentType": "application/json",
+              "$ref-sample": null,
+              "schemaId": "57fcb5efe736cf0d6488cbff",
+              "typeName": "AttemptScore"
+            },
+            {
+              "contentType": "text/json",
+              "$ref-sample": null,
+              "schemaId": "57fcb5efe736cf0d6488cbff",
+              "typeName": "AttemptScore"
+            },
+            {
+              "contentType": "application/xml",
+              "$ref-sample": null,
+              "schemaId": "57fcb5efe736cf0d6488cbff",
+              "typeName": "AttemptScore"
+            },
+            {
+              "contentType": "text/xml",
+              "$ref-sample": null,
+              "schemaId": "57fcb5efe736cf0d6488cbff",
+              "typeName": "AttemptScore"
+            }
+          ],
+          "headers": []
+        },
+        {
+          "statusCode": 404,
+          "$ref-description": "api-management/apis/Quiz.API_Admin/operations/GetAttemptScore.response.404.description.html",
+          "representations": [
+            {
+              "contentType": "application/json",
+              "$ref-sample": null
+            },
+            {
+              "contentType": "text/json",
+              "$ref-sample": null
+            },
+            {
+              "contentType": "application/xml",
+              "$ref-sample": null
+            },
+            {
+              "contentType": "text/xml",
+              "$ref-sample": null
+            }
+          ],
+          "headers": []
+        }
+      ]
+    },
+    {
+      "id": "/apis/57fcb5eee736cf02301ce2de/operations/57fcb5f0e736cf0d6488cc0a",
+      "name": "GetQuizById",
+      "method": "GET",
+      "urlTemplate": "/api/Quizzes/{id}",
+      "templateParameters": [
+        {
+          "name": "id",
+          "description": null,
+          "type": "string",
+          "defaultValue": null,
+          "required": true,
+          "values": []
+        }
+      ],
+      "$ref-description": null,
+      "request": {
+        "$ref-description": null,
+        "queryParameters": [],
+        "headers": [],
+        "representations": []
+      },
+      "responses": [
+        {
+          "statusCode": 200,
+          "$ref-description": "api-management/apis/Quiz.API_Admin/operations/GetQuizById.response.200.description.html",
+          "representations": [
+            {
+              "contentType": "application/json",
+              "$ref-sample": null
+            },
+            {
+              "contentType": "text/json",
+              "$ref-sample": null
+            },
+            {
+              "contentType": "application/xml",
+              "$ref-sample": null
+            },
+            {
+              "contentType": "text/xml",
+              "$ref-sample": null
+            }
+          ],
+          "headers": []
+        },
+        {
+          "statusCode": 404,
+          "$ref-description": "api-management/apis/Quiz.API_Admin/operations/GetQuizById.response.404.description.html",
+          "representations": [
+            {
+              "contentType": "application/json",
+              "$ref-sample": null
+            },
+            {
+              "contentType": "text/json",
+              "$ref-sample": null
+            },
+            {
+              "contentType": "application/xml",
+              "$ref-sample": null
+            },
+            {
+              "contentType": "text/xml",
+              "$ref-sample": null
+            }
+          ],
+          "headers": []
+        }
+      ]
+    },
+    {
+      "id": "/apis/57fcb5eee736cf02301ce2de/operations/57fcb5f0e736cf0d6488cc06",
+      "name": "GetQuizQuestionById",
+      "method": "GET",
+      "urlTemplate": "/api/quizzes/{quizid}/questions/{questionid}",
+      "templateParameters": [
+        {
+          "name": "quizid",
+          "description": null,
+          "type": "string",
+          "defaultValue": null,
+          "required": true,
+          "values": []
+        },
+        {
+          "name": "questionid",
+          "description": null,
+          "type": "string",
+          "defaultValue": null,
+          "required": true,
+          "values": []
+        }
+      ],
+      "$ref-description": null,
+      "request": {
+        "$ref-description": null,
+        "queryParameters": [],
+        "headers": [],
+        "representations": []
+      },
+      "responses": [
+        {
+          "statusCode": 200,
+          "$ref-description": "api-management/apis/Quiz.API_Admin/operations/GetQuizQuestionById.response.200.description.html",
+          "representations": [
+            {
+              "contentType": "application/json",
+              "$ref-sample": null
+            },
+            {
+              "contentType": "text/json",
+              "$ref-sample": null
+            },
+            {
+              "contentType": "application/xml",
+              "$ref-sample": null
+            },
+            {
+              "contentType": "text/xml",
+              "$ref-sample": null
+            }
+          ],
+          "headers": []
+        },
+        {
+          "statusCode": 404,
+          "$ref-description": "api-management/apis/Quiz.API_Admin/operations/GetQuizQuestionById.response.404.description.html",
+          "representations": [
+            {
+              "contentType": "application/json",
+              "$ref-sample": null
+            },
+            {
+              "contentType": "text/json",
+              "$ref-sample": null
+            },
+            {
+              "contentType": "application/xml",
+              "$ref-sample": null
+            },
+            {
+              "contentType": "text/xml",
+              "$ref-sample": null
+            }
+          ],
+          "headers": []
+        }
+      ]
+    },
+    {
+      "id": "/apis/57fcb5eee736cf02301ce2de/operations/57fcb5f0e736cf0d6488cc01",
+      "name": "StartAttempt",
+      "method": "POST",
+      "urlTemplate": "/api/quizzes/{quizid}/attempts",
+      "templateParameters": [
+        {
+          "name": "quizid",
+          "description": null,
+          "type": "string",
+          "defaultValue": null,
+          "required": true,
+          "values": []
+        }
+      ],
+      "$ref-description": null,
+      "request": {
+        "$ref-description": null,
+        "queryParameters": [],
+        "headers": [],
+        "representations": [
+          {
+            "contentType": "application/json",
+            "$ref-sample": null,
+            "schemaId": "57fcb5efe736cf0d6488cbff",
+            "typeName": "AttemptRequest"
+          },
+          {
+            "contentType": "text/json",
+            "$ref-sample": null,
+            "schemaId": "57fcb5efe736cf0d6488cbff",
+            "typeName": "AttemptRequest"
+          },
+          {
+            "contentType": "application/xml",
+            "$ref-sample": null,
+            "schemaId": "57fcb5efe736cf0d6488cbff",
+            "typeName": "AttemptRequest"
+          },
+          {
+            "contentType": "text/xml",
+            "$ref-sample": null,
+            "schemaId": "57fcb5efe736cf0d6488cbff",
+            "typeName": "AttemptRequest"
+          },
+          {
+            "contentType": "application/x-www-form-urlencoded",
+            "$ref-sample": null
+          }
+        ]
+      },
+      "responses": [
+        {
+          "statusCode": 200,
+          "$ref-description": "api-management/apis/Quiz.API_Admin/operations/StartAttempt.response.200.description.html",
+          "representations": [
+            {
+              "contentType": "application/json",
+              "$ref-sample": null,
+              "schemaId": "57fcb5efe736cf0d6488cbff",
+              "typeName": "Object"
+            },
+            {
+              "contentType": "text/json",
+              "$ref-sample": null,
+              "schemaId": "57fcb5efe736cf0d6488cbff",
+              "typeName": "Object"
+            },
+            {
+              "contentType": "application/xml",
+              "$ref-sample": null,
+              "schemaId": "57fcb5efe736cf0d6488cbff",
+              "typeName": "Object"
+            },
+            {
+              "contentType": "text/xml",
+              "$ref-sample": null,
+              "schemaId": "57fcb5efe736cf0d6488cbff",
+              "typeName": "Object"
+            }
+          ],
+          "headers": []
+        },
+        {
+          "statusCode": 201,
+          "$ref-description": "api-management/apis/Quiz.API_Admin/operations/StartAttempt.response.201.description.html",
+          "representations": [
+            {
+              "contentType": "application/json",
+              "$ref-sample": null
+            },
+            {
+              "contentType": "text/json",
+              "$ref-sample": null
+            },
+            {
+              "contentType": "application/xml",
+              "$ref-sample": null
+            },
+            {
+              "contentType": "text/xml",
+              "$ref-sample": null
+            }
+          ],
+          "headers": []
+        },
+        {
+          "statusCode": 400,
+          "$ref-description": "api-management/apis/Quiz.API_Admin/operations/StartAttempt.response.400.description.html",
+          "representations": [
+            {
+              "contentType": "application/json",
+              "$ref-sample": null
+            },
+            {
+              "contentType": "text/json",
+              "$ref-sample": null
+            },
+            {
+              "contentType": "application/xml",
+              "$ref-sample": null
+            },
+            {
+              "contentType": "text/xml",
+              "$ref-sample": null
+            }
+          ],
+          "headers": []
+        },
+        {
+          "statusCode": 404,
+          "$ref-description": "api-management/apis/Quiz.API_Admin/operations/StartAttempt.response.404.description.html",
+          "representations": [
+            {
+              "contentType": "application/json",
+              "$ref-sample": null
+            },
+            {
+              "contentType": "text/json",
+              "$ref-sample": null
+            },
+            {
+              "contentType": "application/xml",
+              "$ref-sample": null
+            },
+            {
+              "contentType": "text/xml",
+              "$ref-sample": null
+            }
+          ],
+          "headers": []
+        }
+      ]
+    },
+    {
+      "id": "/apis/57fcb5eee736cf02301ce2de/operations/57fcb5f0e736cf0d6488cc0d",
+      "name": "Subscriptions_Delete",
+      "method": "DELETE",
+      "urlTemplate": "/api/Subscriptions",
+      "templateParameters": [],
+      "$ref-description": null,
+      "request": {
+        "$ref-description": null,
+        "queryParameters": [],
+        "headers": [],
+        "representations": []
+      },
+      "responses": [
+        {
+          "statusCode": 204,
+          "$ref-description": "api-management/apis/Quiz.API_Admin/operations/Subscriptions_Delete.response.204.description.html",
+          "representations": [],
+          "headers": []
+        }
+      ]
+    },
+    {
+      "id": "/apis/57fcb5eee736cf02301ce2de/operations/57fcb5f0e736cf0d6488cc0c",
+      "name": "Subscriptions_Post",
+      "method": "POST",
+      "urlTemplate": "/api/Subscriptions",
+      "templateParameters": [],
+      "$ref-description": null,
+      "request": {
+        "$ref-description": null,
+        "queryParameters": [],
+        "headers": [],
+        "representations": [
+          {
+            "contentType": "application/json",
+            "$ref-sample": null,
+            "schemaId": "57fcb5efe736cf0d6488cbff",
+            "typeName": "WebHook"
+          },
+          {
+            "contentType": "text/json",
+            "$ref-sample": null,
+            "schemaId": "57fcb5efe736cf0d6488cbff",
+            "typeName": "WebHook"
+          },
+          {
+            "contentType": "application/xml",
+            "$ref-sample": null,
+            "schemaId": "57fcb5efe736cf0d6488cbff",
+            "typeName": "WebHook"
+          },
+          {
+            "contentType": "text/xml",
+            "$ref-sample": null,
+            "schemaId": "57fcb5efe736cf0d6488cbff",
+            "typeName": "WebHook"
+          },
+          {
+            "contentType": "application/x-www-form-urlencoded",
+            "$ref-sample": null
+          }
+        ]
+      },
+      "responses": [
+        {
+          "statusCode": 204,
+          "$ref-description": "api-management/apis/Quiz.API_Admin/operations/Subscriptions_Post.response.204.description.html",
+          "representations": [],
+          "headers": []
+        }
+      ]
+    },
+    {
+      "id": "/apis/57fcb5eee736cf02301ce2de/operations/57fcb5f0e736cf0d6488cc0e",
+      "name": "WebHookFilters_Get",
+      "method": "GET",
+      "urlTemplate": "/api/webhooks/filters",
+      "templateParameters": [],
+      "$ref-description": null,
+      "request": {
+        "$ref-description": null,
+        "queryParameters": [],
+        "headers": [],
+        "representations": []
+      },
+      "responses": [
+        {
+          "statusCode": 200,
+          "$ref-description": "api-management/apis/Quiz.API_Admin/operations/WebHookFilters_Get.response.200.description.html",
+          "representations": [
+            {
+              "contentType": "application/json",
+              "$ref-sample": null,
+              "schemaId": "57fcb5efe736cf0d6488cbff",
+              "typeName": "WebHookFilterArray"
+            },
+            {
+              "contentType": "text/json",
+              "$ref-sample": null,
+              "schemaId": "57fcb5efe736cf0d6488cbff",
+              "typeName": "WebHookFilterArray"
+            },
+            {
+              "contentType": "application/xml",
+              "$ref-sample": null,
+              "schemaId": "57fcb5efe736cf0d6488cbff",
+              "typeName": "WebHookFilterArray"
+            },
+            {
+              "contentType": "text/xml",
+              "$ref-sample": null,
+              "schemaId": "57fcb5efe736cf0d6488cbff",
+              "typeName": "WebHookFilterArray"
+            }
+          ],
+          "headers": []
+        }
+      ]
+    },
+    {
+      "id": "/apis/57fcb5eee736cf02301ce2de/operations/57fcb5f0e736cf0d6488cc14",
+      "name": "WebHookRegistrations_Delete",
+      "method": "DELETE",
+      "urlTemplate": "/api/webhooks/registrations/{id}",
+      "templateParameters": [
+        {
+          "name": "id",
+          "description": null,
+          "type": "string",
+          "defaultValue": null,
+          "required": true,
+          "values": []
+        }
+      ],
+      "$ref-description": null,
+      "request": {
+        "$ref-description": null,
+        "queryParameters": [],
+        "headers": [],
+        "representations": []
+      },
+      "responses": [
+        {
+          "statusCode": 200,
+          "$ref-description": "api-management/apis/Quiz.API_Admin/operations/WebHookRegistrations_Delete.response.200.description.html",
+          "representations": [
+            {
+              "contentType": "application/json",
+              "$ref-sample": null,
+              "schemaId": "57fcb5efe736cf0d6488cbff",
+              "typeName": "Object"
+            },
+            {
+              "contentType": "text/json",
+              "$ref-sample": null,
+              "schemaId": "57fcb5efe736cf0d6488cbff",
+              "typeName": "Object"
+            },
+            {
+              "contentType": "application/xml",
+              "$ref-sample": null,
+              "schemaId": "57fcb5efe736cf0d6488cbff",
+              "typeName": "Object"
+            },
+            {
+              "contentType": "text/xml",
+              "$ref-sample": null,
+              "schemaId": "57fcb5efe736cf0d6488cbff",
+              "typeName": "Object"
+            }
+          ],
+          "headers": []
+        }
+      ]
+    },
+    {
+      "id": "/apis/57fcb5eee736cf02301ce2de/operations/57fcb5f0e736cf0d6488cc11",
+      "name": "WebHookRegistrations_DeleteAll",
+      "method": "DELETE",
+      "urlTemplate": "/api/webhooks/registrations",
+      "templateParameters": [],
+      "$ref-description": null,
+      "request": {
+        "$ref-description": null,
+        "queryParameters": [],
+        "headers": [],
+        "representations": []
+      },
+      "responses": [
+        {
+          "statusCode": 200,
+          "$ref-description": "api-management/apis/Quiz.API_Admin/operations/WebHookRegistrations_DeleteAll.response.200.description.html",
+          "representations": [
+            {
+              "contentType": "application/json",
+              "$ref-sample": null,
+              "schemaId": "57fcb5efe736cf0d6488cbff",
+              "typeName": "Object"
+            },
+            {
+              "contentType": "text/json",
+              "$ref-sample": null,
+              "schemaId": "57fcb5efe736cf0d6488cbff",
+              "typeName": "Object"
+            },
+            {
+              "contentType": "application/xml",
+              "$ref-sample": null,
+              "schemaId": "57fcb5efe736cf0d6488cbff",
+              "typeName": "Object"
+            },
+            {
+              "contentType": "text/xml",
+              "$ref-sample": null,
+              "schemaId": "57fcb5efe736cf0d6488cbff",
+              "typeName": "Object"
+            }
+          ],
+          "headers": []
+        }
+      ]
+    },
+    {
+      "id": "/apis/57fcb5eee736cf02301ce2de/operations/57fcb5f0e736cf0d6488cc0f",
+      "name": "WebHookRegistrations_Get",
+      "method": "GET",
+      "urlTemplate": "/api/webhooks/registrations",
+      "templateParameters": [],
+      "$ref-description": null,
+      "request": {
+        "$ref-description": null,
+        "queryParameters": [],
+        "headers": [],
+        "representations": []
+      },
+      "responses": [
+        {
+          "statusCode": 200,
+          "$ref-description": "api-management/apis/Quiz.API_Admin/operations/WebHookRegistrations_Get.response.200.description.html",
+          "representations": [
+            {
+              "contentType": "application/json",
+              "$ref-sample": null,
+              "schemaId": "57fcb5efe736cf0d6488cbff",
+              "typeName": "WebHookArray"
+            },
+            {
+              "contentType": "text/json",
+              "$ref-sample": null,
+              "schemaId": "57fcb5efe736cf0d6488cbff",
+              "typeName": "WebHookArray"
+            },
+            {
+              "contentType": "application/xml",
+              "$ref-sample": null,
+              "schemaId": "57fcb5efe736cf0d6488cbff",
+              "typeName": "WebHookArray"
+            },
+            {
+              "contentType": "text/xml",
+              "$ref-sample": null,
+              "schemaId": "57fcb5efe736cf0d6488cbff",
+              "typeName": "WebHookArray"
+            }
+          ],
+          "headers": []
+        }
+      ]
+    },
+    {
+      "id": "/apis/57fcb5eee736cf02301ce2de/operations/57fcb5f0e736cf0d6488cc12",
+      "name": "WebHookRegistrations_Lookup",
+      "method": "GET",
+      "urlTemplate": "/api/webhooks/registrations/{id}",
+      "templateParameters": [
+        {
+          "name": "id",
+          "description": null,
+          "type": "string",
+          "defaultValue": null,
+          "required": true,
+          "values": []
+        }
+      ],
+      "$ref-description": null,
+      "request": {
+        "$ref-description": null,
+        "queryParameters": [],
+        "headers": [],
+        "representations": []
+      },
+      "responses": [
+        {
+          "statusCode": 200,
+          "$ref-description": "api-management/apis/Quiz.API_Admin/operations/WebHookRegistrations_Lookup.response.200.description.html",
+          "representations": [
+            {
+              "contentType": "application/json",
+              "$ref-sample": null,
+              "schemaId": "57fcb5efe736cf0d6488cbff",
+              "typeName": "WebHook"
+            },
+            {
+              "contentType": "text/json",
+              "$ref-sample": null,
+              "schemaId": "57fcb5efe736cf0d6488cbff",
+              "typeName": "WebHook"
+            },
+            {
+              "contentType": "application/xml",
+              "$ref-sample": null,
+              "schemaId": "57fcb5efe736cf0d6488cbff",
+              "typeName": "WebHook"
+            },
+            {
+              "contentType": "text/xml",
+              "$ref-sample": null,
+              "schemaId": "57fcb5efe736cf0d6488cbff",
+              "typeName": "WebHook"
+            }
+          ],
+          "headers": []
+        }
+      ]
+    },
+    {
+      "id": "/apis/57fcb5eee736cf02301ce2de/operations/57fcb5f0e736cf0d6488cc10",
+      "name": "WebHookRegistrations_Post",
+      "method": "POST",
+      "urlTemplate": "/api/webhooks/registrations",
+      "templateParameters": [],
+      "$ref-description": null,
+      "request": {
+        "$ref-description": null,
+        "queryParameters": [],
+        "headers": [],
+        "representations": [
+          {
+            "contentType": "application/json",
+            "$ref-sample": null,
+            "schemaId": "57fcb5efe736cf0d6488cbff",
+            "typeName": "WebHook"
+          },
+          {
+            "contentType": "text/json",
+            "$ref-sample": null,
+            "schemaId": "57fcb5efe736cf0d6488cbff",
+            "typeName": "WebHook"
+          },
+          {
+            "contentType": "application/xml",
+            "$ref-sample": null,
+            "schemaId": "57fcb5efe736cf0d6488cbff",
+            "typeName": "WebHook"
+          },
+          {
+            "contentType": "text/xml",
+            "$ref-sample": null,
+            "schemaId": "57fcb5efe736cf0d6488cbff",
+            "typeName": "WebHook"
+          },
+          {
+            "contentType": "application/x-www-form-urlencoded",
+            "$ref-sample": null
+          }
+        ]
+      },
+      "responses": [
+        {
+          "statusCode": 200,
+          "$ref-description": "api-management/apis/Quiz.API_Admin/operations/WebHookRegistrations_Post.response.200.description.html",
+          "representations": [
+            {
+              "contentType": "application/json",
+              "$ref-sample": null,
+              "schemaId": "57fcb5efe736cf0d6488cbff",
+              "typeName": "WebHook"
+            },
+            {
+              "contentType": "text/json",
+              "$ref-sample": null,
+              "schemaId": "57fcb5efe736cf0d6488cbff",
+              "typeName": "WebHook"
+            },
+            {
+              "contentType": "application/xml",
+              "$ref-sample": null,
+              "schemaId": "57fcb5efe736cf0d6488cbff",
+              "typeName": "WebHook"
+            },
+            {
+              "contentType": "text/xml",
+              "$ref-sample": null,
+              "schemaId": "57fcb5efe736cf0d6488cbff",
+              "typeName": "WebHook"
+            }
+          ],
+          "headers": []
+        }
+      ]
+    },
+    {
+      "id": "/apis/57fcb5eee736cf02301ce2de/operations/57fcb5f0e736cf0d6488cc13",
+      "name": "WebHookRegistrations_Put",
+      "method": "PUT",
+      "urlTemplate": "/api/webhooks/registrations/{id}",
+      "templateParameters": [
+        {
+          "name": "id",
+          "description": null,
+          "type": "string",
+          "defaultValue": null,
+          "required": true,
+          "values": []
+        }
+      ],
+      "$ref-description": null,
+      "request": {
+        "$ref-description": null,
+        "queryParameters": [],
+        "headers": [],
+        "representations": [
+          {
+            "contentType": "application/json",
+            "$ref-sample": null,
+            "schemaId": "57fcb5efe736cf0d6488cbff",
+            "typeName": "WebHook"
+          },
+          {
+            "contentType": "text/json",
+            "$ref-sample": null,
+            "schemaId": "57fcb5efe736cf0d6488cbff",
+            "typeName": "WebHook"
+          },
+          {
+            "contentType": "application/xml",
+            "$ref-sample": null,
+            "schemaId": "57fcb5efe736cf0d6488cbff",
+            "typeName": "WebHook"
+          },
+          {
+            "contentType": "text/xml",
+            "$ref-sample": null,
+            "schemaId": "57fcb5efe736cf0d6488cbff",
+            "typeName": "WebHook"
+          },
+          {
+            "contentType": "application/x-www-form-urlencoded",
+            "$ref-sample": null
+          }
+        ]
+      },
+      "responses": [
+        {
+          "statusCode": 200,
+          "$ref-description": "api-management/apis/Quiz.API_Admin/operations/WebHookRegistrations_Put.response.200.description.html",
+          "representations": [
+            {
+              "contentType": "application/json",
+              "$ref-sample": null,
+              "schemaId": "57fcb5efe736cf0d6488cbff",
+              "typeName": "Object"
+            },
+            {
+              "contentType": "text/json",
+              "$ref-sample": null,
+              "schemaId": "57fcb5efe736cf0d6488cbff",
+              "typeName": "Object"
+            },
+            {
+              "contentType": "application/xml",
+              "$ref-sample": null,
+              "schemaId": "57fcb5efe736cf0d6488cbff",
+              "typeName": "Object"
+            },
+            {
+              "contentType": "text/xml",
+              "$ref-sample": null,
+              "schemaId": "57fcb5efe736cf0d6488cbff",
+              "typeName": "Object"
+            }
+          ],
+          "headers": []
+        }
+      ]
+    }
+  ],
+  "apiSchemas": [
+    {
+      "id": "/apis/57fcb5eee736cf02301ce2de/schemas/57fcb5efe736cf0d6488cbff",
+      "contentType": "application/vnd.ms-azure-apim.swagger.definitions+json",
+      "$ref-documentValue": "api-management/apis/Quiz.API_Admin/apiSchemas/57fcb5efe736cf0d6488cbff.document"
+    }
+  ],
+  "$ref-policy": "api-management/policies/apis/Quiz.API_Admin.xml"
+}

@@ -1,0 +1,175 @@
+{
+  "definitions": {
+    "Object": {
+      "type": "object",
+      "properties": {}
+    },
+    "AttemptRequest": {
+      "type": "object",
+      "properties": {
+        "Email": {
+          "type": "string"
+        }
+      }
+    },
+    "ScoreRequest": {
+      "type": "object",
+      "properties": {
+        "Answers": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/AttemptAnswer"
+          }
+        }
+      }
+    },
+    "AttemptAnswer": {
+      "type": "object",
+      "properties": {
+        "QuestionId": {
+          "type": "string"
+        },
+        "Answer": {
+          "format": "int32",
+          "type": "integer"
+        }
+      }
+    },
+    "AttemptScore": {
+      "type": "object",
+      "properties": {
+        "NumberOfQuestions": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "NumberOfCorrectAnswers": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "ScoreInPercentage": {
+          "format": "int32",
+          "type": "integer"
+        }
+      }
+    },
+    "QuizQuestion": {
+      "type": "object",
+      "properties": {
+        "Id": {
+          "type": "string"
+        },
+        "Question": {
+          "type": "string"
+        },
+        "Choices": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/QuestionChoice"
+          }
+        },
+        "CorrectAnswer": {
+          "format": "int32",
+          "type": "integer"
+        }
+      }
+    },
+    "QuestionChoice": {
+      "type": "object",
+      "properties": {
+        "Choice": {
+          "type": "string"
+        }
+      }
+    },
+    "Quiz": {
+      "type": "object",
+      "properties": {
+        "Id": {
+          "type": "string"
+        },
+        "Name": {
+          "type": "string"
+        },
+        "Questions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/QuizQuestion"
+          }
+        }
+      }
+    },
+    "WebHook": {
+      "required": [
+        "WebHookUri"
+      ],
+      "type": "object",
+      "properties": {
+        "Id": {
+          "type": "string"
+        },
+        "WebHookUri": {
+          "type": "string"
+        },
+        "Secret": {
+          "type": "string"
+        },
+        "Description": {
+          "type": "string"
+        },
+        "IsPaused": {
+          "type": "boolean"
+        },
+        "Filters": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "readOnly": true
+        },
+        "Headers": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          },
+          "readOnly": true
+        },
+        "Properties": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/definitions/Object"
+          },
+          "readOnly": true
+        }
+      }
+    },
+    "WebHookFilter": {
+      "type": "object",
+      "properties": {
+        "Name": {
+          "type": "string"
+        },
+        "Description": {
+          "type": "string"
+        }
+      }
+    },
+    "QuizArray": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Quiz"
+      }
+    },
+    "WebHookFilterArray": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/WebHookFilter"
+      }
+    },
+    "WebHookArray": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/WebHook"
+      }
+    }
+  }
+}

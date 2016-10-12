@@ -1,0 +1,27 @@
+require 'net/http'
+
+uri = URI('{{scheme}}://{{host}}{{path}}')
+uri.query = URI.encode_www_form({
+{% if parameters.size > 0 -%}
+    # Request parameters
+{% for parameter in parameters -%}
+    '{{parameter.name}}' => '{{parameter.value}}'{% unless forloop.last %},{% endunless %}
+{% endfor -%}
+{% endif -%}
+})
+
+request = Net::HTTP::{{ method | downcase | capitalize }}.new(uri.request_uri)
+{% for header in headers -%}
+# Request headers
+request['{{header.name}}'] = '{{header.value}}'
+{% endfor -%}
+{% if body -%}
+# Request body
+request.body = "{{ body | replace:'"','\"' }}"
+{% endif -%}
+
+response = Net::HTTP.start(uri.host, uri.port, :use_ssl => uri.scheme == 'https') do |http|
+    http.request(request)
+end
+
+puts response.body
