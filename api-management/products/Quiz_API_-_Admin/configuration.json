@@ -1,0 +1,16 @@
+{
+  "id": "/products/5829d5d71d5c1e053c7e97d2",
+  "name": "Quiz API - Admin",
+  "$ref-description": "api-management/products/Quiz_API_-_Admin/product.description.html",
+  "terms": null,
+  "subscriptionRequired": true,
+  "approvalRequired": false,
+  "subscriptionsLimit": 1,
+  "state": "notPublished",
+  "$refs-groups": [
+    "api-management/groups/Administrators/configuration.json"
+  ],
+  "$refs-apis": [
+    "api-management/apis/Quiz.API_Admin/configuration.json"
+  ]
+}

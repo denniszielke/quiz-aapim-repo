@@ -12,6 +12,24 @@
 -->
 <policies>
 	<inbound>
+		<validate-jwt header-name="Authorization" failed-validation-httpcode="401" failed-validation-error-message="Unauthorized - token validation failed by APIM - need to be in quizmaker role" require-signed-tokens="true" require-expiration-time="true">
+			<openid-config url="https://login.windows.net/{{AADTenantId}}/.well-known/openid-configuration" />
+			<audiences>
+				<audience>{{TokenAudience}}</audience>
+				<!-- if there are multiple possible allowed values, then add additional value elements -->
+			</audiences>
+			<issuers>
+				<issuer>https://sts.windows.net/{{AADTenantId}}/</issuer>
+				<!-- if there are multiple possible allowed values, then add additional value elements -->
+			</issuers>
+			<required-claims>
+				<claim name="roles" match="all">
+					<value>quizmaker</value>
+				</claim>
+				<!-- if there are multiple possible allowed values, then add additional value elements -->
+			</required-claims>
+		</validate-jwt>
+		<set-variable name="roles" value="@(string.Join(", ", context.Request.Headers.GetValueOrDefault("Authorization","").Split(' ')[1].AsJwt()?.Claims["roles"]))" />
 		<set-backend-service base-url="{{QuizApiBackend}}" />
 		<base />
 	</inbound>
@@ -19,6 +37,10 @@
 		<base />
 	</backend>
 	<outbound>
+		<set-header name="Called-As-Role" exists-action="skip">
+			<value>@((String)context.Variables["roles"])</value>
+			<!-- for multiple headers with the same name add additional value elements -->
+		</set-header>
 		<base />
 	</outbound>
 </policies>

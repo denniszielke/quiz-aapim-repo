@@ -154,7 +154,7 @@
       "method": "GET",
       "urlTemplate": "/api/Quizzes",
       "templateParameters": [],
-      "$ref-description": "",
+      "$ref-description": null,
       "request": {
         "$ref-description": null,
         "queryParameters": [],
@@ -168,25 +168,25 @@
           "representations": [
             {
               "contentType": "application/json",
-              "$ref-sample": "",
+              "$ref-sample": null,
               "schemaId": "57fcb6f5e736cf0d6488cc31",
               "typeName": "QuizArray"
             },
             {
               "contentType": "text/json",
-              "$ref-sample": "",
+              "$ref-sample": null,
               "schemaId": "57fcb6f5e736cf0d6488cc31",
               "typeName": "QuizArray"
             },
             {
               "contentType": "application/xml",
-              "$ref-sample": "",
+              "$ref-sample": null,
               "schemaId": "57fcb6f5e736cf0d6488cc31",
               "typeName": "QuizArray"
             },
             {
               "contentType": "text/xml",
-              "$ref-sample": "",
+              "$ref-sample": null,
               "schemaId": "57fcb6f5e736cf0d6488cc31",
               "typeName": "QuizArray"
             }
@@ -298,7 +298,7 @@
           "values": []
         }
       ],
-      "$ref-description": "",
+      "$ref-description": null,
       "request": {
         "$ref-description": null,
         "queryParameters": [],
@@ -312,25 +312,25 @@
           "representations": [
             {
               "contentType": "application/json",
-              "$ref-sample": "",
+              "$ref-sample": null,
               "schemaId": "57fcb6f5e736cf0d6488cc31",
               "typeName": "AttemptScore"
             },
             {
               "contentType": "text/json",
-              "$ref-sample": "",
+              "$ref-sample": null,
               "schemaId": "57fcb6f5e736cf0d6488cc31",
               "typeName": "AttemptScore"
             },
             {
               "contentType": "application/xml",
-              "$ref-sample": "",
+              "$ref-sample": null,
               "schemaId": "57fcb6f5e736cf0d6488cc31",
               "typeName": "AttemptScore"
             },
             {
               "contentType": "text/xml",
-              "$ref-sample": "",
+              "$ref-sample": null,
               "schemaId": "57fcb6f5e736cf0d6488cc31",
               "typeName": "AttemptScore"
             }
@@ -343,19 +343,19 @@
           "representations": [
             {
               "contentType": "application/json",
-              "$ref-sample": ""
+              "$ref-sample": null
             },
             {
               "contentType": "text/json",
-              "$ref-sample": ""
+              "$ref-sample": null
             },
             {
               "contentType": "application/xml",
-              "$ref-sample": ""
+              "$ref-sample": null
             },
             {
               "contentType": "text/xml",
-              "$ref-sample": ""
+              "$ref-sample": null
             }
           ],
           "headers": []
